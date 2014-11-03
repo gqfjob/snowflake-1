@@ -45,8 +45,6 @@ public class IdWorker implements Snowflake.Iface {
      * @param datacenterId
      */
     public IdWorker(long workerId, long datacenterId) {
-        System.err.println(maxDatacenterId);
-        System.out.println(maxWorkerId);
         if (workerId > maxWorkerId || workerId < 0) {
             throw new IllegalArgumentException(String.format("workerId can't be greater than %d or less than 0.", maxWorkerId));
         }
